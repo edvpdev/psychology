@@ -9,6 +9,6 @@ Instructions to launch locally:
    - PORT = 5000
    - MONGO_URI = &lt;Your mongoDB URI&gt;
    - JWT_SECRET = &lt;Any secret key for encryption&gt;
-   - ADMIN_PW = &lt;Admin password for CMS section in the application&gt;
+   - ADMIN_PW = &lt;Admin password for logging into CMS section in the application&gt; // username is *admin*
  - Push dummy data to mongoDB by running *npm run data:import*
  - Run: *npm run dev*
