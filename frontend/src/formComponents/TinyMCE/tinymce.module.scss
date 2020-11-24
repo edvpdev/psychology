@@ -1,0 +1,22 @@
+@import '../../index.scss';
+
+.inputGroup {
+    margin-bottom: 1rem;
+    .tox-tinymce {
+        width: 100%;
+        padding: 0.2rem;
+        font-size: 1rem;
+        border: 1px solid $primary-color;
+        background-color: white;
+        color: #666;
+    
+        &:focus {
+            border: 1px solid $secondary-color;
+            outline: none;
+        }
+    }
+
+    label {
+        margin-bottom: 0;
+    }
+}

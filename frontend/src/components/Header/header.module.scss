@@ -1,0 +1,59 @@
+@import '../../index.scss';
+
+
+
+.bgPrimary {
+  @include set-background($primary-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px $secondary-color;
+  opacity: 0.9;
+  height: 60px;
+}
+
+.navbar__logo {
+  a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    font-weight: 600;
+  }
+}
+
+.navbar__list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar__list__listItem {
+  height: 100%;
+  line-height: 59px;
+
+  &:hover {
+    background: $secondary-color;
+  }
+
+  a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    font-weight: 600;
+  }
+}
+
+.navbar__list__listItem__icon {
+  color: #fff;
+  margin: 0rem 1rem;
+  cursor: pointer;
+}
+

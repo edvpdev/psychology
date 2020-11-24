@@ -1,0 +1,20 @@
+@import '../../index.scss';
+
+.services {
+    min-height: 100vh;
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    margin: auto;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 2rem;
+    margin-top: 60px;
+  
+    @include lg {
+      width: 90%;
+      max-width: 90%;
+    } 
+}

@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.footer {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.bgLight {
+  @include set-background($light-color);
+  border: #ccc 1px solid;
+}

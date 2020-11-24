@@ -1,0 +1,43 @@
+@import '../../index.scss';
+
+.inputGroup {
+    margin-bottom: 1rem;
+
+    @include lg {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .inputHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        label {
+            margin-bottom: 0;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        padding: 0.2rem;
+        font-size: 1rem;
+        border: 1px solid $primary-color;
+        background-color: white;
+        color: #666;
+
+        @include lg {
+            height: 80%;
+        }
+    
+        &:focus {
+            border: 1px solid $secondary-color;
+            outline: none;
+        }
+    }
+
+    .error {
+        font-size: .7rem;
+        color: red;
+    }
+}

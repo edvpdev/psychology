@@ -1,0 +1,26 @@
+@import '../../index.scss';
+
+.articles {
+  min-height: calc(100vh - 60px);
+}
+
+.articlesInner {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 60%;
+  margin: auto;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 2rem;
+
+  @include lg {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+.seeAll {
+  margin-bottom: 2rem;
+}

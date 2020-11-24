@@ -1,0 +1,39 @@
+@import '../../index.scss';
+
+.adminSection {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    margin: auto;
+    align-items: left;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 2rem;
+    margin: 0 auto;
+    padding-top: 60px;
+  
+    @include lg {
+      width: 90%;
+      max-width: 90%;
+      padding: 1rem;
+      padding-top: 60px;
+    }
+}
+  
+h2 {
+    color: $primary-color;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+h3 {
+    color: $secondary-color;
+    margin: 1rem 0rem;
+    font-size: 1.25rem;
+}

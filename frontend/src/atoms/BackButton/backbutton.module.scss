@@ -1,0 +1,17 @@
+.backWrapper {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fdd85f;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backWrapper__icon {
+    color: white;
+  }

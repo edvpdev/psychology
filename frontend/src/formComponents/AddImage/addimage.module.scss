@@ -1,0 +1,51 @@
+@import '../../index.scss';
+
+.addImage {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+    span {
+        margin-left: 1rem;
+    }
+
+    .addImageWrapper {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &:hover {
+            background-color: $secondary-color;
+        }
+    
+        .icon {
+            color: white;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+    }
+}
+
+.imageDetails {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    span {
+        margin-right: .5rem
+    }
+
+    .icon {
+        cursor: pointer;
+    }
+}
+

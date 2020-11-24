@@ -1,0 +1,35 @@
+@import '../../index.scss';
+
+.specialistEditSection {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    margin: auto;
+    align-items: left;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 2rem;
+    margin-top: 60px;
+  
+    @include lg {
+      width: 90%;
+      max-width: 90%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        border: 1px solid #888;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: 700px;
+
+        @include lg {
+          width: 100%;
+          max-width: 100%;
+        }
+    }
+}

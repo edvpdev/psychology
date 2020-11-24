@@ -1,0 +1,45 @@
+@import '../../index.scss';
+
+.inputGroup {
+
+    @include lg {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.2rem;
+        font-size: 1rem;
+        border: 1px solid $primary-color;
+        background-color: white;
+        color: #666;
+    
+        &:focus {
+            border: 1px solid $secondary-color;
+            outline: none;
+        }
+    }
+
+    .inputHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        label {
+            margin-bottom: 0;
+        }
+    }
+
+    .error {
+        font-size: .7rem;
+        color: red;
+    }
+}
+
+.small {
+    label {
+        font-size: .8rem;
+        margin: 0;
+    }
+}

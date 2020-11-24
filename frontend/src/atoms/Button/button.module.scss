@@ -1,0 +1,51 @@
+@import '../../index.scss';
+
+.btn {
+    height: min-content;
+    display: inline-block;
+    background: $light-color;
+    color: #333;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.6rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: all 0.2s ease-in;
+    width: max-content;
+  
+    @include lg {
+      padding: 0.25rem 0.8rem;
+      font-size: 0.875rem;
+    }
+}
+  
+.btnPrimary {
+  @include set-background($primary-color);
+  &:hover {
+    background: $secondary-color;
+    color: black;
+  }
+}
+
+.btnLogin {
+  color:white;
+  font-weight: 600;
+  @include set-background($primary-color);
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+.btnDisabled {
+  background: #aaa285;
+  pointer-events: none;
+}
+
+.small {
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+}

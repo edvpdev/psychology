@@ -1,0 +1,65 @@
+@import '../../index.scss';
+
+.article {
+  margin-bottom: 2rem;
+  width: 100%;
+  padding-left: 1rem;
+  box-sizing: content-box;
+
+  &:hover {
+    border-left: 3px solid #fbc100;
+  }
+}
+
+.article__content {
+  display: flex;
+}
+
+.imgWrapper {
+  height: 200px;
+  width: 250px;
+  margin: 0rem 1rem  0.5rem 0rem;
+}
+
+.detailsWrapper {
+  width: 100%;
+}
+
+.detailsWrapper__details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  align-content: flex-start;
+
+  @include lg {
+    font-size: 1.25rem;
+  }
+}
+
+.date {
+  font-size: 1.5rem;
+}
+
+.author {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.preview {
+  margin-bottom: .5rem;
+}
+
+.tags {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.tags__tag {
+  &::after {
+    content: ", "
+  }
+
+  &:last-child::after {
+    content: "" 
+  }
+}

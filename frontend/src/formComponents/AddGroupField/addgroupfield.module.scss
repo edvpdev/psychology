@@ -1,0 +1,30 @@
+@import '../../index.scss';
+
+.addGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    .title {
+        margin-bottom: .5rem;
+    }
+}
+
+.smallInputGroupWrapper {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+
+    @include lg {
+        flex-direction: column;
+    }
+
+    span {
+        @include lg {
+            align-self: auto !important;
+        }
+    }
+}

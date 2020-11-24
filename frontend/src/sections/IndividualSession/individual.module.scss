@@ -1,0 +1,55 @@
+@import '../../index.scss';
+
+.bgGlass {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+  border: #ccc 1px solid;
+}
+
+.individual {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 3px solid $secondary-color;
+}
+
+.individual__title {
+  color: $secondary-color;
+  margin: 1rem 0rem;
+  font-size: 1.25rem;
+}
+
+.individual__details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.details__info {
+  flex-basis: 60%;
+  padding: 1rem;
+
+  @include lg {
+    flex-basis: 100%;
+  }
+}
+
+.bottom {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: auto;
+
+  @include lg {
+    flex-direction: column;
+  }
+}
+
+.price {
+  color: $secondary-color;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}

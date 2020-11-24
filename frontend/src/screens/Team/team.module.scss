@@ -1,0 +1,68 @@
+@import '../../index.scss';
+
+.specialistsSection {
+    min-height: 100vh;
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    margin: auto;
+    align-items: left;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 60px;
+  
+    @include lg {
+      width: 90%;
+      max-width: 90%;
+    }
+  
+    
+  }
+
+  // h2 {
+  //   color: $primary-color;
+  //   font-size: 3rem;
+  //   line-height: 3rem;
+  //   margin-bottom: 1.5rem;
+  //   font-weight: 600;
+  //   text-transform: uppercase;
+  // }
+
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    grid-gap: 2rem;
+
+    @include lg {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+
+
+
+  //   .profile-img-1 {
+  //     background-image: url("../dist/img/profile1.jpg");
+  //   }
+  //   .profile-img-2 {
+  //     background-image: url("../dist/img/profile2.jpg");
+  //   }
+  //   .profile-img-3 {
+  //     background-image: url("../dist/img/profile3.jpg");
+  //   }
+  //   .profile-img-4 {
+  //     background-image: url("../dist/img/profile4.jpg");
+  //   }
+  //   .profile-img-5 {
+  //     background-image: url("../dist/img/profile5.jpg");
+  //   }
+  //   .profile-img-6 {
+  //     background-image: url("../dist/img/profile6.jpg");
+  //   }
+  }

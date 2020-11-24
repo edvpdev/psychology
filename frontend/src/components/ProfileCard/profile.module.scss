@@ -1,0 +1,36 @@
+@import '../../index.scss';
+
+.profileBox {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.position {
+  font-size: 0.875rem;
+}
+
+.quote {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  border: 1px solid $secondary-color;
+}
+
+
+.profileImgWrapper {
+  height: 250px;
+  width: 200px;
+  border: 1px solid #333;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}

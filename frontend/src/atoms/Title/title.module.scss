@@ -1,0 +1,45 @@
+@import '../../index.scss';
+
+.large {
+  color: $secondary-color;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.xLarge {
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+   color: white;
+  
+    @include lg {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+}
+
+.medium {
+  color: $secondary-color;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.small {
+  color: $secondary-color;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.center {
+  text-align:center;
+}

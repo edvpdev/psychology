@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  color: $secondary-color;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-left: 3px solid $secondary-color;
+}
