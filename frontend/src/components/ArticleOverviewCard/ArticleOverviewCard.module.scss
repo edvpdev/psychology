@@ -19,6 +19,10 @@
   height: 200px;
   width: 250px;
   margin: 0rem 1rem  0.5rem 0rem;
+
+  @include sm {
+    display: none;
+  }
 }
 
 .detailsWrapper {
@@ -30,6 +34,10 @@
   justify-content: space-between;
   font-size: 1.5rem;
   align-content: flex-start;
+
+  @include sm {
+    flex-direction: column;
+  }
 
   @include lg {
     font-size: 1.25rem;

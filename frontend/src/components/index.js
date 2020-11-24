@@ -11,4 +11,4 @@ export { default as ContactForm } from './ContactForm/ContactForm'
 export { default as Pagination } from './Pagination/Pagination'
 export { default as ImgCard } from './ImgCard/ImgCard'
 export { default as AdminMenuList } from './AdminMenuList/AdminMenuList'
-
+export { default as MobileNavbar } from './MobileNavbar/MobileNavbar'

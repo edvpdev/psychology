@@ -22,15 +22,6 @@
     
   }
 
-  // h2 {
-  //   color: $primary-color;
-  //   font-size: 3rem;
-  //   line-height: 3rem;
-  //   margin-bottom: 1.5rem;
-  //   font-weight: 600;
-  //   text-transform: uppercase;
-  // }
-
   .team {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -43,26 +34,7 @@
 
     @include sm {
       grid-template-columns: 1fr;
+      padding: 0rem;
     }
 
-
-
-  //   .profile-img-1 {
-  //     background-image: url("../dist/img/profile1.jpg");
-  //   }
-  //   .profile-img-2 {
-  //     background-image: url("../dist/img/profile2.jpg");
-  //   }
-  //   .profile-img-3 {
-  //     background-image: url("../dist/img/profile3.jpg");
-  //   }
-  //   .profile-img-4 {
-  //     background-image: url("../dist/img/profile4.jpg");
-  //   }
-  //   .profile-img-5 {
-  //     background-image: url("../dist/img/profile5.jpg");
-  //   }
-  //   .profile-img-6 {
-  //     background-image: url("../dist/img/profile6.jpg");
-  //   }
   }

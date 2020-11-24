@@ -1,0 +1,37 @@
+@import '../../index.scss';
+
+.navbar__list {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 0rem;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: $primary-color;
+}
+  
+.navbar__list__listItem {
+    height: auto;
+    line-height: 59px;
+    width: 100%;
+  
+    &:hover {
+      background: $secondary-color;
+    }
+  
+    a {
+      color: #fff;
+      padding: 0.45rem;
+      margin: 0 0.25rem;
+      font-weight: 600;
+    }
+}
+  
+.navbar__list__listItem__icon {
+    color: #fff;
+    margin: 0rem 1rem;
+    cursor: pointer;
+}
+  

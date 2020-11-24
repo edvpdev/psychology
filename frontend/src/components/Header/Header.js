@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import LoginPopup from './LoginPopup/LoginPopup'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faSignOutAlt, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import {useMediaQuery, useMediaQueries} from '@react-hook/media-query'
+import { MobileNavbar } from '../index'
 
 import styles from './header.module.scss'
 
@@ -14,6 +16,7 @@ import {
 
 const Header = () => {
   let [loginPopupVisibility, setLoginPopupVisibility] = useState(false)
+  let [mobileHeaderVisibility, setMobileHeaderVisibility] = useState(false)
   let [loggedIn, setLoggedIn] = useState(false)
 
   const dispatch = useDispatch()
@@ -21,6 +24,8 @@ const Header = () => {
 
   const adminLogin = useSelector((state) => state.adminLogin)
   const { adminInfo } = adminLogin
+
+  const matches = useMediaQuery('(max-width: 400px)')
 
   useEffect(() => {
     if (adminInfo) {
@@ -30,7 +35,13 @@ const Header = () => {
 
   const loginClickHandler = (e) => {
     e.preventDefault();
+    setMobileHeaderVisibility(false)
     setLoginPopupVisibility(!loginPopupVisibility)
+  }
+
+  const hamburgerHandler = (e) => {
+    e.preventDefault();
+    setMobileHeaderVisibility(!mobileHeaderVisibility)
   }
 
   const logoutHandler = () => {
@@ -44,8 +55,8 @@ const Header = () => {
       <h1 className={styles.navbar__logo}>
         <Link to="/" className={styles.logo}>Logo</Link>
       </h1>
-      <ul className={styles.navbar__list}>
-      <li className={styles.navbar__list__listItem}>
+      {!matches && <ul className={styles.navbar__list}>
+        <li className={styles.navbar__list__listItem}>
           <Link to="/articles">Articles</Link>
           {/* <a href="services.html">Services</a> */}
         </li>
@@ -62,16 +73,16 @@ const Header = () => {
           {/* <a href="contact.html">Contact</a> */}
         </li>
         {
-          !loggedIn && (
-            <li className={styles.navbar__list__listItem } onClick={loginClickHandler}>
-              <FontAwesomeIcon className={styles.navbar__list__listItem__icon} icon={faUser} size="lg" />
+          loggedIn && (
+            <li className={styles.navbar__list__listItem}>
+              <Link to="/admin">Admin</Link>
             </li>
           )
         }
         {
-          loggedIn && (
-            <li className={styles.navbar__list__listItem}>
-              <Link to="/admin">Admin</Link>
+          !loggedIn && (
+            <li className={styles.navbar__list__listItem } onClick={loginClickHandler}>
+              <FontAwesomeIcon className={styles.navbar__list__listItem__icon} icon={faUser} size="lg" />
             </li>
           )
         }
@@ -82,9 +93,21 @@ const Header = () => {
             </li>
           )
         }
-      </ul>
+      </ul>}
       {
         loginPopupVisibility && !loggedIn && <LoginPopup setLoginVisibility={setLoginPopupVisibility} loginPopupVisibility={loginPopupVisibility}/>
+      }
+      {
+        matches && 
+        <ul className={styles.navbar__list}>
+          <li className={styles.navbar__list__listItem } onClick={hamburgerHandler}>
+            <FontAwesomeIcon className={styles.navbar__list__listItem__icon} icon={faBars} size="lg" />
+          </li>
+        </ul>
+      }
+      {
+        mobileHeaderVisibility &&
+        <MobileNavbar loggedIn={loggedIn} logoutHandler={logoutHandler} loginClickHandler={loginClickHandler}/>
       }
     </nav>
   )
