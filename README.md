@@ -7,8 +7,8 @@ Instructions to launch locally:
  - Make .env file in root directory with following lines:
    - NODE_ENV = development
    - PORT = 5000
-   - MONGO_URI = <Your mongoDB URI>
-   - JWT_SECRET = <Any secret key for encryption>
-   - ADMIN_PW = <Admin password for CMS section in the application>
+   - MONGO_URI = &lt;Your mongoDB URI&gt;
+   - JWT_SECRET = &lt;Any secret key for encryption&gt;
+   - ADMIN_PW = &lt;Admin password for CMS section in the application&gt;
  - Push dummy data to mongoDB by running *npm run data:import*
  - Run: *npm run dev*
